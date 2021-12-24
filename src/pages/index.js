@@ -12,8 +12,8 @@ const IndexPage = () => {
       <GlobalStyles />
       <Hero />
       <Projects />
-      <About />
-      <Footer />
+      <About /> 
+      <Footer /> 
     </>
   );
 };

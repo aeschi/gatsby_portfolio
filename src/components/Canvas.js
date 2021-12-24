@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Sketch from "react-p5";
 import { useScrollPosition } from "../utils/useScrollPosition";
 import styled from "styled-components";
@@ -7,6 +7,7 @@ const StyledCanvas = styled(Sketch)`
   position: absolute;
   top: 0;
   z-index: -1;
+  width: 100vw;
 `;
 
 let spacing = 150;
@@ -14,8 +15,7 @@ let arcSize1, arcSize2, arcSize3, arcSize4;
 let colorR, colorG, colorB;
 
 const Canvas = () => {
-  const scrollPosition = useScrollPosition();
-  console.log(scrollPosition);
+  const scrollPosition = useScrollPosition()/2;
 
   const setup = (p5, canvasParentRef) => {
     // use parent to render the canvas in this ref
@@ -27,7 +27,8 @@ const Canvas = () => {
   };
 
   const draw = (p5) => {
-    p5.background(30);
+    p5.resizeCanvas(window.innerWidth, window.innerHeight, true);
+    p5.background(255);
 
     for (let y = 0; y < p5.height; y += spacing) {
       for (let x = 0; x < p5.width; x += spacing) {
@@ -48,14 +49,19 @@ const Canvas = () => {
           p5.TWO_PI
         );
 
-        colorR = p5.map(scrollPosition, 0, p5.width, 160, 53);
-        colorG = p5.map(scrollPosition, 0, p5.width, 76, 100);
-        colorB = p5.map(p5.mouseX, 0, p5.height, 76, 114);
+        colorR = p5.map(scrollPosition, 0, p5.width, 255, 59);
+        colorG = p5.map(scrollPosition, 0, p5.width, 87, 88);
+        colorB = p5.map(scrollPosition, 0, p5.height, 103, 102);
         spacing = p5.map(p5.width, 0, p5.height, p5.height / 40, p5.height / 2);
 
+        
         p5.fill(colorR, colorG, colorB);
-        p5.stroke(240, 217, 186);
-        p5.strokeWeight(spacing / 40);
+        // p5.fill(255, 87, 103);
+        // p5.fill(16, 124, 179);
+        // p5.stroke(240, 217, 186);
+
+        p5.stroke(255-colorR, 255-colorG, 255-colorB);
+        p5.strokeWeight(spacing / 80);
 
         p5.arc(
           x + spacing * 0.5,
@@ -93,7 +99,7 @@ const Canvas = () => {
     }
   };
 
-  return <StyledCanvas setup={setup} draw={draw} />;
+  return <StyledCanvas setup={setup} draw={draw}/>;
 };
 
 export default Canvas;

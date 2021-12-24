@@ -14,30 +14,22 @@ const GlobalStyle = createGlobalStyle`
 html {
   font-size: 10px;
   font-family: "Helvetica", sans-serif;
+  line-break: normal;
 }
 
-h1 {
-  font-size: 4.8rem;
+h1, h2 {
   font-family: 'PPRadioGrotesk Bold';
-}
-
-h2 {
-  font-size: 3.6rem;
-  font-family: 'PPRadioGrotesk Bold';
-}
-
-h6{
-  font-size: 0.8rem;
-}
-
-p{
-  font-size: 1.6rem;
 }
 
 // COLORS
 
 :root{
     --background-green: #57ab80;
+    --alert: #0075FF;
+    --red: #FF5767;
+    --dark-blue: #3b5866;
+    --yellow: #FFFA69;
+    --blue: #107CB3;
 }
 
 `;
