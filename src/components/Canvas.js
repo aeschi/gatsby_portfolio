@@ -8,13 +8,9 @@ let colorR, colorG, colorB;
 
 const Canvas = () => {
 
-  const scrollPosition = useScrollPosition()/2 ;
-  // const scrollPosition = 20; //useScrollPosition() / 2 ;
-  
-
+  const scrollPosition = useScrollPosition() / 2;
   
   const setup = (p5, canvasParentRef) => {
-    console.log(p5);
     // use parent to render the canvas in this ref
     // (without that p5 will render the canvas outside of your component)
     p5.createCanvas(window?.innerWidth, window?.innerHeight).parent(

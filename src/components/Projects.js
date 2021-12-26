@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import { respondTo } from "./_respondTo";
@@ -102,6 +103,7 @@ const Projects = () => {
                       alt={project.alt}
                     />
                   </a>
+                  <p><Link to="/blog">View Blog</Link></p>
                 </ProjectComponent>
               </div>
             ))}
