@@ -1,33 +1,30 @@
 import React from "react";
 import Sketch from "react-p5";
 import { useScrollPosition } from "../utils/useScrollPosition";
-import styled from "styled-components";
-
-const StyledCanvas = styled(Sketch)`
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  width: 100vw;
-`;
 
 let spacing = 150;
 let arcSize1, arcSize2, arcSize3, arcSize4;
 let colorR, colorG, colorB;
 
 const Canvas = () => {
-  const scrollPosition = useScrollPosition()/2;
 
+  const scrollPosition = useScrollPosition()/2 ;
+  // const scrollPosition = 20; //useScrollPosition() / 2 ;
+  
+
+  
   const setup = (p5, canvasParentRef) => {
+    console.log(p5);
     // use parent to render the canvas in this ref
     // (without that p5 will render the canvas outside of your component)
-    p5.createCanvas(window.innerWidth, window.innerHeight).parent(
+    p5.createCanvas(window?.innerWidth, window?.innerHeight).parent(
       canvasParentRef
     );
     p5.noStroke();
   };
 
   const draw = (p5) => {
-    p5.resizeCanvas(window.innerWidth, window.innerHeight, true);
+    // p5.resizeCanvas(window?.innerWidth, window?.innerHeight, true);
     p5.background(59, 88, 102);
     // p5.background(255);
 
@@ -100,7 +97,7 @@ const Canvas = () => {
     }
   };
 
-  return <StyledCanvas setup={setup} draw={draw}/>;
+  return  <Sketch setup={setup} draw={draw} /> ;
 };
 
 export default Canvas;

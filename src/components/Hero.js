@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Canvas from "../components/Canvas";
 import { respondTo } from "./_respondTo";
+import LoadableP5 from "../components/LoadableP5";
 
 const HeroComponent = styled.section`
   color: #ffffff;
@@ -48,6 +48,13 @@ const Header = styled.header`
   `}
 `;
 
+const LoadableP5Style = styled.section`
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100vw;
+`;
+
 const Hero = () => {
   return (
     <HeroComponent>
@@ -60,7 +67,9 @@ const Hero = () => {
           <span className="hl3"> artsy</span> websites.
         </p>
       </Header>
-      <Canvas />
+      <LoadableP5Style>
+        <LoadableP5 />
+      </LoadableP5Style>
     </HeroComponent>
   );
 };
