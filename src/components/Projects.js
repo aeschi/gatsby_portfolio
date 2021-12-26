@@ -103,16 +103,14 @@ const Projects = () => {
                       alt={project.alt}
                     />
                   </a>
-                  <p><Link to="/blog">View Blog</Link></p>
+                  
                 </ProjectComponent>
               </div>
             ))}
           </div>
 
           <div>
-            <a href="./projects">
-              <p>show more</p>
-            </a>
+            <p><Link to="/projects">show more</Link></p>
           </div>
         </ProjectsContainer>
       </ProjectsComponent>

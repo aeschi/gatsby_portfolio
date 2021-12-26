@@ -20,7 +20,7 @@ const Canvas = () => {
   };
 
   const draw = (p5) => {
-    // p5.resizeCanvas(window?.innerWidth, window?.innerHeight, true);
+    p5.resizeCanvas(window?.innerWidth, window?.innerHeight, true);
     p5.background(59, 88, 102);
     // p5.background(255);
 
