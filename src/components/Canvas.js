@@ -28,7 +28,8 @@ const Canvas = () => {
 
   const draw = (p5) => {
     p5.resizeCanvas(window.innerWidth, window.innerHeight, true);
-    p5.background(255);
+    p5.background(59, 88, 102);
+    // p5.background(255);
 
     for (let y = 0; y < p5.height; y += spacing) {
       for (let x = 0; x < p5.width; x += spacing) {

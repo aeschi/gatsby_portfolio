@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Canvas from "../components/Canvas";
+import { respondTo } from "./_respondTo";
 
 const HeroComponent = styled.section`
-  color: var(--dark-blue);
+  color: #ffffff;
   min-height: 100vh;
   width: 100vw;
   position: relative;
@@ -18,11 +19,33 @@ const Header = styled.header`
   padding: 0rem 2rem;
   h1 {
     font-size: 4.8rem;
-    color: var(--dark-blue);
+    color: var(--yellow);
+    margin: 0;
   }
   p {
+    margin-top: 1rem;
     font-size: 2rem;
   }
+
+  .hl1 {
+    color: var(--red);
+  }
+  .hl2 {
+    color: var(--yellow);
+  }
+  .hl3 {
+    color: var(--blue);
+  }
+
+  ${respondTo.md`
+    h1 {
+    font-size: 8rem;
+    }
+    p {
+    font-size: 3.6rem;
+    padding-right: 20vw;
+    }
+  `}
 `;
 
 const Hero = () => {
@@ -32,7 +55,9 @@ const Hero = () => {
         <h1>HI, I’M ANNA.</h1>
         <p>
           I’m a creative technologist based in Berlin. My projects vary from
-          interactive installations to educative and artsy websites.
+          <span className="hl1"> interactive</span> installations to
+          <span className="hl2"> educative</span> and
+          <span className="hl3"> artsy</span> websites.
         </p>
       </Header>
       <Canvas />

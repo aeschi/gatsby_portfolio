@@ -12,9 +12,9 @@ const ProjectsComponent = styled.section`
   justify-content: space-evenly;
 
   h1 {
-    color: var(--dark-blue);
+    color: var(--red);
     font-size: 4.8rem;
-    margin: 0;
+    margin: 2rem 0;
   }
   p {
     font-size: 1.8rem;

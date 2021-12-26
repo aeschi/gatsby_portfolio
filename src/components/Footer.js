@@ -5,9 +5,11 @@ const FooterComponent = styled.section`
   background-color: #ffffff;
   box-sizing: border-box;
   padding: 1rem 1.5rem;
-  h1 {
-    font-size: 4.8rem;
-    margin-top: 0;
+  h2 {
+    color: var(--dark-blue);
+    font-size: 3.6rem;
+    margin: 2rem 0;
+    line-break: anywhere;
   }
   h6 {
     font-size: 0.8rem;
@@ -26,7 +28,7 @@ const FooterComponent = styled.section`
 const Footer = () => {
   return (
     <FooterComponent>
-      <h1>Get in touch</h1>
+      <h2>GET IN TOUCH</h2>
       <p>
         Feel free to contact me via
         <a href="mailto:annaeschenbacher@icloud.com"> mail</a>

@@ -6,7 +6,7 @@ import { respondTo } from "./_respondTo";
 const AboutComponent = styled.section`
   background-color: var(--dark-blue);
   box-sizing: border-box;
-  padding: 1rem 1.5rem;
+  padding: 0 1.5rem;
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -15,15 +15,18 @@ const AboutComponent = styled.section`
   h1 {
     color: var(--red);
     font-size: 4.8rem;
-    margin: 0;
+    margin: 2rem 0;
   }
   h2 {
     color: var(--red);
-    font-size: 3.4rem;
+    font-size: 3.6rem;
+    margin: 2rem 0;
     line-break: anywhere;
   }
   p {
     font-size: 1.8rem;
+    font-weight: normal;
+    margin: 0 0 1rem 0;
   }
 
   ${respondTo.md`
@@ -35,7 +38,7 @@ const AboutComponent = styled.section`
     font-size: 4.5rem;
     }
     p {
-    font-size: 2.2rem;
+    font-size: 3.6rem;
   }
   `}
 `;
@@ -50,15 +53,16 @@ const AboutBio = styled.section`
   flex: 1.5;
   display: flex;
   flex-direction: column;
-  /* margin-top: 10rem; */
+
   ${respondTo.md`
     margin-left: 4rem;
+    margin-top: 4rem;
   `}
 `;
 
 const AboutList = styled.section`
-  /* background-color: #fff; */
-  /* color: var(--dark-blue); */
+  /* background-color: #fff;
+  color: var(--dark-blue); */
 `;
 
 const About = () => {
@@ -92,7 +96,7 @@ const About = () => {
         <StaticImage src="../images/me.png" alt="A dinosaur" />
 
         <AboutList>
-          <h2>SPEAKING/TEACHING</h2>
+          <h2>SPEAKING</h2>
           <p>
             Podcast audioart - Kunst auf die Ohren: 48 Stunden Neukölln
             <span>@ 48 Stunden Neukölln, Berlin, 2021</span>
