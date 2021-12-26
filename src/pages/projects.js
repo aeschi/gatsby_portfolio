@@ -2,7 +2,7 @@ import React from "react";
 import BlogRoll from "../components/BlogRoll";
 import GlobalStyles from "../components/globalStyles";
 import styled from "styled-components";
-import { respondTo } from "../components/_respondTo";
+// import { respondTo } from "../components/_respondTo";
 
 import "normalize.css";
 
@@ -13,7 +13,6 @@ const ProjectsComponentStyle = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-
   h1 {
     color: var(--red);
     font-size: 4.8rem;
